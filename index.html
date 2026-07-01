@@ -3,21 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Regencias CR | Consultoría química y cumplimiento regulatorio</title>
+  <title>Regencias CR</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --azul-primario: #152956;
       --azul-secundario: #25558C;
       --azul-tecnologico: #4488C0;
-      --verde-acento: #629F35;
-      --neutro: #ABC2CA;
-      --base: #FDFDFD;
+      --verde: #629F35;
       --texto: #3A3A3A;
+      --base: #FDFDFD;
       --gradiente: linear-gradient(135deg, #152956 0%, #25558C 45%, #4488C0 100%);
     }
 
@@ -28,76 +27,35 @@
     }
 
     h1, h2, h3, h4, h5 {
-      color: var(--azul-primario);
       font-weight: 800;
-    }
-
-    a {
-      color: var(--azul-secundario);
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: var(--verde-acento);
+      color: var(--azul-primario);
     }
 
     .navbar {
-      background: rgba(253, 253, 253, 0.96);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 30px rgba(21, 41, 86, 0.08);
+      background: rgba(255,255,255,.96);
+      box-shadow: 0 8px 28px rgba(21,41,86,.08);
     }
 
     .navbar-brand img {
-      height: 48px;
-    }
-
-    .hero {
-      background: var(--gradiente);
-      color: white;
-      padding: 120px 0 90px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 520px;
-      height: 520px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.08);
-      right: -160px;
-      top: -160px;
-    }
-
-    .hero h1 {
-      color: white;
-      font-size: clamp(2.4rem, 5vw, 4.7rem);
-      line-height: 1.05;
-    }
-
-    .hero p {
-      color: rgba(255,255,255,0.9);
-      font-size: 1.15rem;
+      height: 52px;
     }
 
     .btn-primary-custom {
       background: var(--azul-primario);
-      color: white;
-      border: 1px solid var(--azul-primario);
+      color: #fff;
       border-radius: 999px;
       padding: 13px 28px;
       font-weight: 700;
+      border: none;
     }
 
     .btn-primary-custom:hover {
       background: var(--azul-secundario);
-      color: white;
-      border-color: var(--azul-secundario);
+      color: #fff;
     }
 
     .btn-secondary-custom {
-      background: white;
+      background: #fff;
       color: var(--azul-secundario);
       border: 1px solid var(--azul-secundario);
       border-radius: 999px;
@@ -107,26 +65,74 @@
 
     .btn-secondary-custom:hover {
       background: var(--azul-secundario);
+      color: #fff;
+    }
+
+    .hero {
+      background: var(--gradiente);
+      padding: 120px 0 90px;
       color: white;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero h1 {
+      color: white;
+      font-size: clamp(2.5rem, 5vw, 4.6rem);
+      line-height: 1.05;
+    }
+
+    .hero p {
+      color: rgba(255,255,255,.92);
+      font-size: 1.1rem;
+    }
+
+    .hero-card {
+      background: white;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 25px 60px rgba(0,0,0,.18);
+      border: 1px solid rgba(255,255,255,.4);
+    }
+
+    .hero-card img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .badge-custom {
+      background: rgba(98,159,53,.18);
+      color: var(--verde);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      display: inline-block;
+      margin-bottom: 22px;
     }
 
     .section {
-      padding: 90px 0;
+      padding: 85px 0;
+    }
+
+    .section-soft {
+      background: #f5f8fb;
     }
 
     .card-custom {
       background: white;
-      border: 1px solid #edf1f4;
+      border: 1px solid #e9eef2;
       border-radius: 16px;
-      padding: 30px;
+      padding: 28px;
       height: 100%;
-      box-shadow: 0 14px 35px rgba(21, 41, 86, 0.07);
-      transition: all .25s ease;
+      box-shadow: 0 12px 32px rgba(21,41,86,.07);
+      transition: .25s ease;
     }
 
     .card-custom:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 45px rgba(21, 41, 86, 0.12);
+      transform: translateY(-5px);
+      box-shadow: 0 18px 45px rgba(21,41,86,.12);
     }
 
     .icon-box {
@@ -138,51 +144,37 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-    }
-
-    .badge-soft {
-      background: rgba(98, 159, 53, 0.12);
-      color: var(--verde-acento);
-      border-radius: 999px;
-      padding: 8px 16px;
-      font-weight: 700;
-      display: inline-block;
+      font-size: 1.45rem;
       margin-bottom: 18px;
     }
 
-    .bg-soft {
-      background: #f5f8fb;
+    .small-title {
+      color: var(--verde);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: .82rem;
     }
 
     .cta {
       background: var(--gradiente);
+      color: white;
       border-radius: 28px;
       padding: 55px;
-      color: white;
     }
 
     .cta h2 {
       color: white;
     }
 
-    .footer {
+    footer {
       background: var(--azul-primario);
-      color: rgba(255,255,255,0.8);
+      color: rgba(255,255,255,.82);
       padding: 45px 0;
     }
 
-    .footer a {
+    footer a {
       color: white;
-    }
-
-    .small-title {
-      color: var(--azul-secundario);
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      font-size: .82rem;
     }
   </style>
 </head>
@@ -192,7 +184,7 @@
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img src="logo-regenciascr.png" alt="Regencias CR">
+      <img src="Regencias_CR_Alta_Resolucion_Redes.png" alt="Regencias CR">
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -200,46 +192,43 @@
     </button>
 
     <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
         <li class="nav-item"><a class="nav-link" href="#sectores">Sectores</a></li>
         <li class="nav-item"><a class="nav-link" href="#diferenciadores">Diferenciadores</a></li>
         <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
       </ul>
-      <a class="btn btn-primary-custom ms-lg-3" href="https://wa.me/50688499591">Solicitar asesoría</a>
+      <a class="btn btn-primary-custom ms-lg-3" href="https://wa.me/50688499591">
+        <i class="bi bi-whatsapp"></i> 8849-9591
+      </a>
     </div>
   </div>
 </nav>
 
 <section class="hero">
-  <div class="container position-relative">
+  <div class="container">
     <div class="row align-items-center g-5">
-      <div class="col-lg-7">
-        <span class="badge-soft">Consultoría química | Regulación | Cumplimiento</span>
+      <div class="col-lg-6">
+        <span class="badge-custom">Consultoría química | Regulación | Cumplimiento</span>
         <h1>Regencia química y cumplimiento regulatorio sin enredos.</h1>
         <p class="mt-4">
           Asesoría técnica para fabricantes, importadores, bodegas, almacenes fiscales,
           industrias y emprendedores que necesitan operar de forma legal, segura y eficiente.
         </p>
-        <div class="d-flex gap-3 flex-wrap mt-4">
+
+        <div class="d-flex flex-wrap gap-3 mt-4">
           <a href="https://wa.me/50688499591" class="btn btn-secondary-custom">
-            Agendar consulta
+            <i class="bi bi-calendar-check"></i> Agendar consulta
           </a>
           <a href="#servicios" class="btn btn-primary-custom">
-            Ver servicios
+            <i class="bi bi-file-text"></i> Ver servicios
           </a>
         </div>
       </div>
 
-      <div class="col-lg-5">
-        <div class="card-custom bg-white">
-          <h3>¿Qué resolvemos?</h3>
-          <p>Trámites, documentación, inspecciones, etiquetado, seguridad química y requisitos ante instituciones.</p>
-          <hr>
-          <p class="mb-1"><strong>Q. Manfred Solís Román</strong></p>
-          <p class="mb-1">Regente Químico | NI 2563</p>
-          <p class="mb-1">Msolis@regenciascr.com</p>
-          <p class="mb-0">8849-9591</p>
+      <div class="col-lg-6">
+        <div class="hero-card">
+          <img src="Regencias_CR_Alta_Resolucion_Redes.png" alt="Logo oficial Regencias CR">
         </div>
       </div>
     </div>
@@ -249,23 +238,39 @@
 <section class="section">
   <div class="container">
     <div class="text-center mb-5">
-      <p class="small-title">Problemas frecuentes</p>
-      <h2>El cumplimiento químico no debería detener su operación.</h2>
-      <p class="mx-auto" style="max-width: 720px;">
-        Evitamos atrasos, rechazos y riesgos regulatorios mediante criterio técnico,
-        documentación correcta y acompañamiento profesional.
-      </p>
+      <p class="small-title">¿Qué le resolvemos?</p>
+      <h2>Evitamos retrasos, rechazos y riesgos regulatorios.</h2>
     </div>
 
     <div class="row g-4">
-      <div class="col-md-4"><div class="card-custom"><i class="bi bi-file-earmark-x icon-box"></i><h5>Registros rechazados</h5><p>Corrección documental y revisión técnica antes de presentar trámites.</p></div></div>
-      <div class="col-md-4"><div class="card-custom"><i class="bi bi-exclamation-triangle icon-box"></i><h5>Riesgo de sanciones</h5><p>Verificación de requisitos ante Ministerio de Salud, Bomberos, MINAE y Colegio.</p></div></div>
-      <div class="col-md-4"><div class="card-custom"><i class="bi bi-tags icon-box"></i><h5>Etiquetado incorrecto</h5><p>Validación SGA/GHS, frases H/P, pictogramas e información legal.</p></div></div>
+      <div class="col-md-4">
+        <div class="card-custom">
+          <div class="icon-box"><i class="bi bi-file-earmark-x"></i></div>
+          <h5>Registros rechazados</h5>
+          <p>Revisión documental y técnica antes de presentar trámites ante autoridad sanitaria.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-custom">
+          <div class="icon-box"><i class="bi bi-exclamation-triangle"></i></div>
+          <h5>Riesgo de sanciones</h5>
+          <p>Verificación de requisitos ante Ministerio de Salud, Bomberos, MINAE y Colegio.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-custom">
+          <div class="icon-box"><i class="bi bi-tags"></i></div>
+          <h5>Etiquetado incorrecto</h5>
+          <p>Validación SGA/GHS, pictogramas, frases H/P, composición e información legal.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="servicios" class="section bg-soft">
+<section id="servicios" class="section section-soft">
   <div class="container">
     <div class="text-center mb-5">
       <p class="small-title">Servicios</p>
@@ -273,12 +278,53 @@
     </div>
 
     <div class="row g-4">
-      <div class="col-md-6 col-lg-4"><div class="card-custom"><i class="bi bi-person-badge icon-box"></i><h5>Regencias químicas</h5><p>Inscripción, supervisión técnica, inspecciones, capacitación y verificación normativa.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="card-custom"><i class="bi bi-clipboard-check icon-box"></i><h5>Registro de productos</h5><p>Trámites para químicos, cosméticos, higiénicos, industriales y desinfectantes conforme RTCA.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="card-custom"><i class="bi bi-file-text icon-box"></i><h5>FDS / SDS</h5><p>Clasificación SGA/GHS, almacenamiento, transporte, toxicología y medidas de emergencia.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="card-custom"><i class="bi bi-truck icon-box"></i><h5>Fichas de transporte</h5><p>Número UN, clase de riesgo, grupo de embalaje y guías de respuesta.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="card-custom"><i class="bi bi-shield-check icon-box"></i><h5>PPRAQ y planes de riesgo</h5><p>Prevención, derrames, residuos, emergencias, matrices de riesgo y planes operativos.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="card-custom"><i class="bi bi-beaker icon-box"></i><h5>Formulación y desarrollo</h5><p>Diseño de productos, selección de materias primas, estabilidad, costos y escalamiento.</p></div></div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card-custom">
+          <div class="icon-box"><i class="bi bi-person-badge"></i></div>
+          <h5>Regencias químicas</h5>
+          <p>Inscripción, supervisión técnica, apoyo en inspecciones, capacitación y verificación normativa.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-custom">
+          <div class="icon-box"><i class="bi bi-clipboard-check"></i></div>
+          <h5>Registro de productos</h5>
+          <p>Gestión de químicos, cosméticos, higiénicos, industriales y desinfectantes conforme RTCA.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-custom">
+          <div class="icon-box"><i class="bi bi-file-text"></i></div>
+          <h5>FDS / SDS</h5>
+          <p>Clasificación SGA/GHS, almacenamiento, transporte, toxicología y respuesta a emergencias.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-custom">
+          <div class="icon-box"><i class="bi bi-truck"></i></div>
+          <h5>Fichas de transporte</h5>
+          <p>Clasificación ONU, número UN, grupo de embalaje y guías de respuesta.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-custom">
+          <div class="icon-box"><i class="bi bi-shield-check"></i></div>
+          <h5>PPRAQ y planes de riesgo</h5>
+          <p>Planes de prevención, derrames, residuos, emergencias y matrices de riesgo.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-custom">
+          <div class="icon-box"><i class="bi bi-beaker"></i></div>
+          <h5>Formulación y desarrollo</h5>
+          <p>Diseño de productos, selección de materias primas, estabilidad, costos y escalamiento.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -290,8 +336,8 @@
         <p class="small-title">Sectores</p>
         <h2>Para empresas que manejan química en serio.</h2>
         <p>
-          Regencias CR atiende operaciones comerciales, industriales y productivas
-          que requieren criterio técnico y cumplimiento documentado.
+          Acompañamiento para importadores, fabricantes, bodegas, almacenes fiscales,
+          industrias, minería, distribuidores y emprendimientos regulados.
         </p>
       </div>
 
@@ -299,17 +345,17 @@
         <div class="row g-3">
           <div class="col-md-6"><div class="card-custom">Importadores de químicos</div></div>
           <div class="col-md-6"><div class="card-custom">Cosméticos e higiénicos</div></div>
-          <div class="col-md-6"><div class="card-custom">Bodegas y almacenes fiscales</div></div>
+          <div class="col-md-6"><div class="card-custom">Bodegas químicas</div></div>
+          <div class="col-md-6"><div class="card-custom">Almacenes fiscales</div></div>
           <div class="col-md-6"><div class="card-custom">Industrias manufactureras</div></div>
           <div class="col-md-6"><div class="card-custom">Minería y procesos industriales</div></div>
-          <div class="col-md-6"><div class="card-custom">Emprendedores regulados</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="diferenciadores" class="section bg-soft">
+<section id="diferenciadores" class="section section-soft">
   <div class="container">
     <div class="text-center mb-5">
       <p class="small-title">Diferenciadores</p>
@@ -319,23 +365,25 @@
     <div class="row g-4">
       <div class="col-md-4">
         <div class="card-custom">
-          <i class="bi bi-cpu icon-box"></i>
-          <h5>Enfoque integral</h5>
-          <p>Regulación, seguridad, operación, documentación y desarrollo de productos en un solo criterio.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card-custom">
-          <i class="bi bi-award icon-box"></i>
+          <div class="icon-box"><i class="bi bi-award"></i></div>
           <h5>Liderazgo técnico</h5>
-          <p>Dirección por profesional en química con experiencia real en industria, minería y manufactura.</p>
+          <p>Dirección por profesional en química con experiencia práctica en industria, minería y regulación sanitaria.</p>
         </div>
       </div>
+
       <div class="col-md-4">
         <div class="card-custom">
-          <i class="bi bi-building-check icon-box"></i>
+          <div class="icon-box"><i class="bi bi-diagram-3"></i></div>
+          <h5>Enfoque integral</h5>
+          <p>Regulación, operación, seguridad, producción, documentación y desarrollo de productos.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-custom">
+          <div class="icon-box"><i class="bi bi-building-check"></i></div>
           <h5>Conocimiento regulatorio</h5>
-          <p>Ley 8412, RTCA, SGA/GHS, PPRAQ, Ministerio de Salud y Colegio de Químicos.</p>
+          <p>Experiencia en Ley 8412, RTCA, SGA/GHS, PPRAQ y requisitos institucionales.</p>
         </div>
       </div>
     </div>
@@ -348,9 +396,7 @@
       <div class="row align-items-center g-4">
         <div class="col-lg-8">
           <h2>Evite atrasos, rechazos y riesgos innecesarios.</h2>
-          <p class="mb-0">
-            Revisemos su operación, producto o documentación antes de que el problema llegue a una inspección.
-          </p>
+          <p class="mb-0">Revisemos su operación, producto o documentación antes de que el problema llegue a una inspección.</p>
         </div>
         <div class="col-lg-4 text-lg-end">
           <a href="https://wa.me/50688499591" class="btn btn-secondary-custom">
@@ -362,55 +408,33 @@
   </div>
 </section>
 
-<section id="contacto" class="section bg-soft">
+<section id="contacto" class="section section-soft">
   <div class="container">
     <div class="row g-5">
       <div class="col-lg-6">
         <p class="small-title">Contacto</p>
         <h2>Solicite una valoración técnica.</h2>
-        <p>
-          Envíe el tipo de producto, actividad o trámite requerido. Se revisa el caso y se define la ruta regulatoria.
-        </p>
+        <p>Envíe el tipo de producto, actividad o trámite requerido. Se revisa el caso y se define la ruta regulatoria.</p>
 
         <p><strong>Q. Manfred Solís Román</strong></p>
         <p>Regente Químico | NI 2563</p>
-        <p><i class="bi bi-envelope"></i> msolis@regenciascr.com</p>
+        <p><i class="bi bi-envelope"></i> Msolis@regenciascr.com</p>
         <p><i class="bi bi-whatsapp"></i> 8849-9591</p>
       </div>
 
       <div class="col-lg-6">
-        <form class="card-custom">
-          <div class="mb-3">
-            <label class="form-label">Nombre</label>
-            <input type="text" class="form-control" placeholder="Nombre completo">
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Correo</label>
-            <input type="email" class="form-control" placeholder="correo@empresa.com">
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Servicio requerido</label>
-            <select class="form-select">
-              <option>Regencia química</option>
-              <option>Registro de producto</option>
-              <option>FDS / SDS</option>
-              <option>Ficha de transporte</option>
-              <option>PPRAQ / plan de emergencia</option>
-              <option>Formulación</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Mensaje</label>
-            <textarea class="form-control" rows="4" placeholder="Describa brevemente el caso"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary-custom w-100">Enviar solicitud</button>
-        </form>
+        <div class="card-custom">
+          <h4>Datos para contacto</h4>
+          <p>Puede enlazar este formulario a WhatsApp, correo o un backend posteriormente.</p>
+          <a href="mailto:Msolis@regenciascr.com" class="btn btn-primary-custom w-100 mb-3">Enviar correo</a>
+          <a href="https://wa.me/50688499591" class="btn btn-secondary-custom w-100">WhatsApp</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="footer">
+<footer>
   <div class="container d-flex flex-column flex-md-row justify-content-between gap-3">
     <div>
       <strong>Regencias CR</strong><br>
